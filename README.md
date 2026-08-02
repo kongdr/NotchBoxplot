@@ -29,29 +29,30 @@ For detailed documentation, parameter descriptions, and the latest updates, plea
 ## Usage
 Below are quick examples demonstrating how to create dual-notched boxplots using standard built-in R datasets.
 
-Example 1: Comparing the means Only
+### Example 1: Comparing the means Only
 Using the built-in ToothGrowth dataset to display only the mean confidence interval notch.
 
-``r
+```r
 library(NotchBoxplot)
 
-# Create a mean-boxplot
+# Create a mean-notched boxplot
 notch_boxplot(data = ToothGrowth,
               group_col = "supp",
               value_col = "len",
               show_mean_ci = TRUE,
               show_med_ci = FALSE)
-
-Example 2: Comparing simultaneously the group means and medians 
+```
+### Example 2: Comparing simultaneously the group means and medians 
 Using the built-in iris dataset to compare both the group means and the group medians.
 
-``r
+```r
 library(NotchBoxplot)
+
 # Create a dual-notched boxplot
 notch_boxplot(data = iris,
               group_col = "Species",
               value_col = "Sepal.Width")
-
+```
 
 
 ## References
