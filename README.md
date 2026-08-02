@@ -18,10 +18,10 @@ Generates a customizable dual-notched boxplot using ggplot2. It provides the geo
 
 To install the **NotchBoxplot** package from GitHub, please use the following commands in R:
 
-``r
+```r
 library(devtools)
-
 install_github("kongdr/NotchBoxplot")
+```
 
 ## Documentation
 For detailed documentation, parameter descriptions, and the latest updates, please visit the package's GitHub repository at: https://github.com/kongdr/NotchBoxplot
