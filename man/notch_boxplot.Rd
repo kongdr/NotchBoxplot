@@ -2,7 +2,7 @@
 % Please edit documentation in R/notch_boxplot.R
 \name{notch_boxplot}
 \alias{notch_boxplot}
-\title{Title: Dual-notched boxplot in base R}
+\title{Title: Dual-notched boxplot using ggplot2}
 \usage{
 notch_boxplot(
   data,
@@ -48,10 +48,10 @@ notch_boxplot(
 \item{outlier_size}{Numeric. The size of the points representing outliers. Default is 2.}
 }
 \value{
-A dual-notched boxplot in base R.
+A ggplot object representing the dual-notched boxplot.
 }
 \description{
-This function generates a notched boxplot, which can simultaneously comparing both the group means and medians.
+This function generates a notched boxplot, which can simultaneously compare both the group means and medians.
 For theoretical details, please refer to Kong et al. (2026).
 }
 \examples{

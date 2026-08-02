@@ -1,6 +1,6 @@
-#' Title: Dual-notched boxplot in base R
+#' Title: Dual-notched boxplot using ggplot2
 #'
-#' This function generates a notched boxplot, which can simultaneously comparing both the group means and medians.
+#' This function generates a notched boxplot, which can simultaneously compare both the group means and medians.
 #' For theoretical details, please refer to Kong et al. (2026).
 #'
 #' @references Deru Kong, Xuming He, WenWu Wang, Tiejun Tong (2026). Dual-Notched Boxplot: A New Visualization for the Simultaneous Comparison of Means and Medians.
@@ -19,7 +19,7 @@
 #' @param mean_color Character. The color of the dashed mean line. Default is "black".
 #' @param outlier_size Numeric. The size of the points representing outliers. Default is 2.
 #'
-#' @return  A dual-notched boxplot in base R.
+#' @return  A ggplot object representing the dual-notched boxplot.
 #' @export
 #' @import ggplot2
 #' @importFrom dplyr %>% group_by summarise mutate filter left_join bind_rows select n
@@ -280,10 +280,10 @@ notch_boxplot <- function(data,
       plot.margin = margin(10, 5, 10, 5),
       axis.text = element_text(color = "black"),
       legend.position = "none",
-      # --- 分面标签(Width 2.0/3.0)的特殊设置 ---
-      strip.placement = "outside",           # 让 Width 标签在最下面
-      strip.background = element_blank(),    # 去掉标签背景
+      strip.placement = "outside",
+      strip.background = element_blank(),
       strip.text = element_text(size = 14, color = "black"),
-      panel.spacing = unit(0, "lines")       # 让两组紧挨着，看起来像同一个坐标轴
-    ) + guides(fill = "none")+theme(axis.title.x = element_blank())
+      panel.spacing = unit(0, "lines"),
+      axis.title.x = element_blank()
+    ) + guides(fill = "none")
 }
