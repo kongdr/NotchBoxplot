@@ -29,7 +29,7 @@ For detailed documentation, parameter descriptions, and the latest updates, plea
 ## Usage
 Below are quick examples demonstrating how to create dual-notched boxplots using standard built-in R datasets.
 
-### Example 1: Comparing the means Only
+### Example 1: Comparing the means only
 Using the built-in ToothGrowth dataset to display only the mean confidence interval notch.
 
 ```r
